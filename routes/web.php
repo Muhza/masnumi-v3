@@ -11,13 +11,13 @@ use App\Models\barang;
 
 //Route sementara
 Route::get('/', function(){
-    $showprodukuser = barang::paginate(4);
+    // $showprodukuser = barang::paginate(4);
 
-    $data = [
-        'barang' => $showprodukuser
-    ];
+    // $data = [
+    //     'barang' => $showprodukuser
+    // ];
 
-    return view('index', $data);
+    return view('index');
     
 });
 
