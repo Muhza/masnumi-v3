@@ -12,7 +12,7 @@ class UserController extends Controller
         // $this->middleware('auth');
     }
 
-    function profile(){
+    public function profile(){
     	$user = Auth::user();
 
     	return view('produk/home');
