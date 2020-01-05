@@ -5,7 +5,7 @@
 // });
 
 // Route untuk user 
-Route::get('/', 'MasnumiController@indexuser');
+// Route::get('/', 'MasnumiController@indexuser');
 Route::get('/', 'MasnumiController@showprodukuser');
 Route::get('/cariproduk', 'MasnumiController@cariproduk');
 
