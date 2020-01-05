@@ -1,12 +1,26 @@
 <?php
+use App\Models\barang;
 
 // Route::get('/', function(){
 // 	return view('welcome');
 // });
 
 // Route untuk user 
-Route::get('/', 'MasnumiController@indexuser');
+// Route::get('/', 'MasnumiController@indexuser');
 // Route::get('/', 'MasnumiController@showprodukuser');
+
+//Route sementara
+Route::get('/', function(){
+    $showprodukuser = barang::paginate(4);
+
+    $data = [
+        'barang' => $showprodukuser
+    ];
+
+    return view('index', $data);
+    
+});
+
 Route::get('/cariproduk', 'MasnumiController@cariproduk');
 
 
